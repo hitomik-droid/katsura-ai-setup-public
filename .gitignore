@@ -1,0 +1,15 @@
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/Dots用_導入手順.md
+!/導入手順.md
+!/共通ルール_ひな形.md
+!/ChatGPT用_最初に渡す文.md
+!/追加するもの.md
+!/外部ツールの出典.md
+!/全AI共通キット/
+/全AI共通キット/*
+!/全AI共通キット/README.md
+!/全AI共通キット/共通ルール.md
+!/全AI共通キット/状態管理.py
