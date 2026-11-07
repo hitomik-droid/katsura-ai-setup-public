@@ -13,7 +13,7 @@ import sys
 import time
 from pathlib import Path
 
-EMOJIS = ("🔴", "🤖", "💬", "⏸️", "⏸", "✅")
+EMOJIS = ("🔴", "🩷", "🤖", "💬", "⏸️", "⏸", "✅")
 RECORDS = Path.home() / "Library/Application Support/Claude/claude-code-sessions"
 RULE = "https://github.com/hitomik-droid/katsura-ai-setup-public/blob/main/会話名と改名.md"
 
@@ -46,7 +46,7 @@ def problems(title: str):
     out = []
     head = next((e for e in EMOJIS if title.startswith(e)), None)
     if head is None:
-        out.append("先頭に状態の絵文字（🔴🤖💬⏸️✅のどれか1つ）が無い")
+        out.append("先頭に状態の絵文字（🔴🩷🤖💬⏸️✅のどれか1つ）が無い")
     if "【" in title or "】" in title:
         out.append("【フォルダ】が付いている（今は付けない）")
     if "｜" not in title:
@@ -74,7 +74,7 @@ def main():
         f"会話名が決まりの形ではありません（今の名前：{title or '無し'}）。"
         + "／".join(found)
         + "。終える前に set_session_title（session_id は self）で「状態の絵文字＋案件名｜作業名」に直し、"
-        "get_session（self）で読み戻してください。絵文字は🔴あなたの番／🤖作業中／💬ほかの人の返事待ち／⏸️待機中／✅終わった。"
+        "get_session（self）で読み戻してください。絵文字は🔴本人の番／🩷2人で使う時のもう1人の番／🤖作業中／💬ほかの人の返事待ち／⏸️待機中／✅終わった。"
         "頼み事を送ってから返事が来るまでは名前を変えない（その時は直さずに終えてよい）。"
         f"決まりの全文：{RULE}"
     )
